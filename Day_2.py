@@ -34,7 +34,7 @@ width = float(input("Ievadi istabas platumu"))
 length = float(input("Ievadi istabas garumu"))
 height = float(input("Ievadi istabas augstumu"))
 room_vol = width * length * height
-print(f"Istabas kubitūra ir {room_vol} m\u00b3")
+print(f"Istabas kubatūra ir {room_vol} m\u00b3")
 
 #_______________________________________3.uzdevums____________________________________
 
@@ -43,3 +43,8 @@ print(f"Istabas kubitūra ir {room_vol} m\u00b3")
 # Write a program that asks user for temperature in Celsius and prints out this same temperature in Farenheit
 # formula is: farenheit = 32+celsius*(9/5)
 # PS Remember about data type conversion, also consider precision
+
+Tmp_C = float(input("Ievadi  temperatūru C un es to pārveidošu un Farenheitiem"))
+Tmp_f = 32 + Tmp_C * (9 / 5)
+Tmp_f_Round = round(Tmp_f, 2)
+print(f"Šī temperatura pēc Farenketa skalas būs {Tmp_f}")
