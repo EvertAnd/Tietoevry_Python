@@ -46,5 +46,5 @@ print(f"Istabas kubatūra ir {room_vol} m\u00b3")
 
 Tmp_C = float(input("Ievadi  temperatūru C un es to pārveidošu un Farenheitiem"))
 Tmp_f = 32 + Tmp_C * (9 / 5)
-Tmp_f_Round = round(Tmp_f, 2)
+Tmp_f_Round = round(Tmp_f, 2)   #pieliku skatoties risinājumus
 print(f"Šī temperatura pēc Farenketa skalas būs {Tmp_f}")
