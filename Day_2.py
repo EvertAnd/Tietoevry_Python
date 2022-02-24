@@ -48,3 +48,18 @@ Tmp_C = float(input("Ievadi  temperatūru C un es to pārveidošu un Farenheitie
 Tmp_f = 32 + Tmp_C * (9 / 5)
 Tmp_f_Round = round(Tmp_f, 2)   #pieliku skatoties risinājumus
 print(f"Šī temperatura pēc Farenketa skalas būs {Tmp_f}")
+
+#_____________________________________Rezultāts_______________________________
+
+# Kā tevi sauc mans draugs?Andis
+# Andis cik tev ir gadi?36
+# Jauki, tad tu pēc 64 būsi jau 100 gadus vecs :)
+# Un 2058. gadā tu būsi tieši 100 gadus vecs!
+# Ievadi istabas platumu23.5
+# Ievadi istabas garumu34
+# Ievadi istabas augstumu3.5
+# Istabas kubatūra ir 2796.5 m³
+# Ievadi  temperatūru C un es to pārveidošu un Farenheitiem31
+# Šī temperatura pēc Farenketa skalas būs 87.80000000000001
+#
+# Process finished with exit code 0
