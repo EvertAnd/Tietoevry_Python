@@ -15,7 +15,7 @@ else:
     print("Pārāk liela temperatūra, iespējams drudzis")
 
 
-print(" 1. Ziemassvētku bonuss")
+print(" 2. Ziemassvētku bonuss")
 # The company has promised a Christmas bonus in the amount of 15% of the monthly salary for EVERY year of service over 2 years.
 # Task. Ask the user for the amount of the monthly salary and the number of years worked.
 # Calculate the bonus.
@@ -49,3 +49,20 @@ c = float(input("Ievadi pirmo skaitli"))
 numbers = [a,b,c]                     # pŗāk ilgi domāt loģiku sakārtot :D tāpēc kārtoju  sarakstu uzreiz.
 numbers_sorted = sorted(numbers)
 print(numbers_sorted)
+
+
+# Rezultāts
+#  1. Weselības pārbaude
+# Kāda ir tava pašreizējā ķermeņa temperatura? : 37.6
+# Pārāk liela temperatūra, iespējams drudzis
+#  2. Ziemassvētku bonuss
+# Kāda ir tava mēnešalga?1500
+# Kāds ir tavs darba stāžs3
+# Tava darba pieredze ir 3.0 gadi tāpēc bonusā saņemsi 225.0 Euro
+# 3. Sakārto ievadīto skaitļus
+# Ievadi pirmo skaitli3
+# Ievadi pirmo skaitli5
+# Ievadi pirmo skaitli1
+# [1.0, 3.0, 5.0]
+
+
