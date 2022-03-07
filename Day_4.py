@@ -11,13 +11,13 @@ the_end = 100
 #     print(n,end="")
 for n in range(start, the_end):
 
-    if n == the_end:
-        if n % (Fizz*Buzz) == 0:
-            print("FizzBuzz", end="")
+    # if n == the_end:
+    #     if n % (Fizz*Buzz) == 0:
+    #         print("FizzBuzz", end=" ")
     if n % Fizz == 0:
-        print("Fizz",end="")
+        print("Fizz",end=" ")
     if n % Buzz == 0:
-        print("Buzz", end="")
+        print("Buzz", end=" ")
     else:
         print(n, end=" ")
 
@@ -34,9 +34,9 @@ for n in range(start, the_end):
 # *****
 # Note: remember that several symbols can be printed at once, for example: print ("" * 10 + "*" * 6)
 
-# height = int(input("Cik garu eglīti gribi?: "))
-# for i in range(height):
-#     print(' ' * (height - i - 1) + '*' * (2 * i + 1))  # x2 is always rounded up
+height = int(input("Cik garu eglīti gribi?: "))
+for i in range(height):
+    print(' ' * (height - i - 1) + '*' * (2 * i + 1))  # x2 is always rounded up
 
 
 #
