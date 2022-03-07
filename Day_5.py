@@ -12,7 +12,6 @@ r_vards = vards[::-1]
 print(f"Sveiks {vards[:-1]} Tavs vārds apgriestā veidā būtu: " + r_vards.capitalize())
 
 
-
 # 2. Almost Hangman
 # Write a program to recognize a text symbol
 # The user (first player) enters the text.
