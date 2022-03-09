@@ -11,10 +11,10 @@ if numbers == "q":
     print("You decided to quit")
 else:
     number_list = numbers.split(",")
-    sum = 0
+    summa = 0
     for n in number_list:
-        sum += float(n.strip())
-    average = sum / len(number_list)
+        summa += float(n.strip())
+    average = summa / len(number_list)
 print("1b. The program shows both the average value of the numbers and ALL the numbers entered")
 print(f"{average} šis ir vidējais skaitlis")
 print(f"Tevis ievadītie skaitļi: {number_list}")
@@ -51,13 +51,13 @@ print(list)
 # Alus kauss mans -> Sula ssuak snam
 # PS Split and join operations could be useful here.
 print("3.Uzd_Apgrieztie vārdi")
-teikums = input("Ievadi teikumu: ")
-vardi = teikums.split()
-print(vardi)
-reversed_v = [v[::-1] for v in vardi]
-print(reversed_v)
-reversed_t = ' '.join(reversed_v)
-print(f"{teikums} -> {reversed_t}")
+sentence = input("Ievadi teikumu: ")
+words = sentence.split()
+print(words)
+reversed_w = [w[::-1] for w in words]
+print(reversed_w)
+reversed_t = ' '.join(reversed_w)
+print(f"{sentence} -> {reversed_w}")
 
 
 
