@@ -9,7 +9,7 @@ print("______________________1. UZDEVUMS __________________________")
 
 vards = input(print("Ievadi savu vārdu"))
 r_vards = vards[::-1]
-print(f"Sveiks {vards[:-1]} Tavs vārds apgriestā veidā būtu: " + r_vards.capitalize())
+print(f"Sveiks, {vards[:-1]} Tavs vārds apgriestā veidā būtu: " + r_vards.capitalize())
 
 
 # 2. Almost Hangman
@@ -26,6 +26,12 @@ print(f"Sveiks {vards[:-1]} Tavs vārds apgriestā veidā būtu: " + r_vards.cap
 #
 # In principle, this is a good start to the game of hangman.
 # https://en.wikipedia.org/wiki/Hangman_(game)
+
+print("______________________2. UZDEVUMS __________________________")
+
+
+
+
 #
 # 3. Text conversion
 #
