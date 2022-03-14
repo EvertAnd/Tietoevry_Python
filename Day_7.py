@@ -28,7 +28,8 @@ print(my_result)
 # is_palindrome("ABa") -> True
 # is_palindrome("nava") -> False
 #
-
+print("2.UZD -> for quiting press type q ")
+print("Otherwise...")
 def is_palindrome(text):
     reversed_text = text[::-1]
     return text == reversed_text
