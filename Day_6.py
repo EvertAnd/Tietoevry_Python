@@ -64,3 +64,4 @@ print(f"{sentence} -> {reversed_w}")
 # 4. Prime numbers -
 # this could be a weekend assignment, there is hardly enough time in class
 # Find and output the first 20 (even better option to choose how many first primes we want) prime numbers in the form of a list i.e. [2,3,5,7,11, ...]
+

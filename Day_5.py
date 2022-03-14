@@ -29,12 +29,13 @@ print(f"Sveiks, {vards[:-1]} Tavs vārds apgriestā veidā būtu: " + r_vards.ca
 
 print("______________________2. UZDEVUMS __________________________")
 
-
+phrase_entered = input("Lūdzu ievadi vārdu vai frāzi ko gribi lai otrs spēlētājs atmin: ")
+phrase_repl =
 
 
 #
 # 3. Text conversion
-#
+#:
 # Write a program for text conversion
 # Save user input
 # Print the entered text without changes
