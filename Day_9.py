@@ -7,10 +7,12 @@
 #
 print("UZD- 1.Min, Avg, Max")
 
+
 def get_min_avg_max(value_list):
     print(value_list)
     avg = sum(value_list) / len(value_list)
     return min(value_list), int(avg), max(value_list)
+
 
 print(get_min_avg_max([0, 10, 1, 9]))
 
@@ -27,32 +29,34 @@ print(get_min_avg_max([0, 10, 1, 9]))
 # the incoming sequence can be a tuple or list with values ​​of the same type, or even a string.
 #
 print("UZD- 1.Min, med, Max")
-def get_min_med_max(value_list):
 
-    sorted_l = sorted(value_list)
-    med_index = len(sorted_l) / 2
+
+def get_min_med_max(value_list):
+    sorr = sorted(value_list)
+    minn = min(value_list)
+    maxx = max(value_list)
+    med_index: float = len(sorr) / 2
 
     if not med_index % 1 == 0:
-        med_index = int((len(sorted_l) - 1) / 2)
-        med = sorted_l[med_index]
+        med_index = int((len(sorr) - 1) / 2)
+        med = sorr[med_index]
     else:
-        if type(sorted_l[int(med_index) - 1]) is str:
-            med = sorted_l[int(med_index) - 1] + sorted_l[int(med_index)]
+        if type(sorr[int(med_index) - 1]) is str:
+            med = sorr[int(med_index) - 1] + sorr[int(med_index)]
         else:
-            med = (sorted_l[int(med_index) - 1] + sorted_l[int(med_index)]) / 2
+            med = (sorr[int(med_index) - 1] + sorr[int(med_index)]) / 2
 
-    return min(value_list), med, max(value_list)
+    return minn, med, maxx
+
 
 # get_min_med_max ([1,5,8,4,3]) -> (1,4,8)
 # get_min_med_max ([2,2,9,9,4,3]) -> (2,3.5,9)
 # get_min_med_max ("baaac") -> ('a', 'a', 'c')
 # get_min_med_max ("faaacb") -> ('a', 'ab', 'f')
-print(get_min_med_max ([1,5,8,4,3]))
-print(get_min_med_max ([2,2,9,9,4,3]))
-print(get_min_med_max ("baaac"))
-print(get_min_med_max ("faaacb"))
-
-
+print(get_min_med_max([1, 5, 8, 4, 3]))
+print(get_min_med_max([2, 2, 9, 9, 4, 3]))
+print(get_min_med_max("baaac"))
+print(get_min_med_max("faaacb"))
 
 # 2. Common Elements
 # Write a function that returns a tuple with common elements in three sequences. Inputs can be list, tuple, string.
