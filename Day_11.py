@@ -1,4 +1,5 @@
 import random
+
 # UZD 1
 def shuffling():
     symbols = [2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K", "A"]
@@ -13,8 +14,6 @@ def shuffling():
     return cards
 
 
-
-if __name__ == '__main__':
-    cards = shuffling()
-    print(f"Full card deck:",cards[:52])
-    print(cards[:5])
+cards = shuffling()
+print(f"Full card deck:", cards[:52])
+print(cards[:5])
