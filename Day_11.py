@@ -1,11 +1,10 @@
 import random
-
-
+# UZD 1
 def shuffling():
     symbols = [2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K", "A"]
     suits = ["♦", "♥", "♠", "♣"]
     # extra = ["Joker"]
-    deck = [str(c) for c in symbols]
+    [str(c) for c in symbols]
     cards = []
     for deck in symbols:
         for suit in suits:
