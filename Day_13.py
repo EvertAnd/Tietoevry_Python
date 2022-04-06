@@ -19,17 +19,17 @@ print("Find a JSON API of your choice")
 print("This will get: Ron Swanson quotes.")
 print("________________________________________________________")
 
+getcount = int(input("How many quotes do you want to se: : "))
 
-def get_Ron_Swanson_quotes(url="https://ron-swanson-quotes.herokuapp.com/v2/quotes/10"):
 
+def get_Ron_Swanson_quotes(url=f'https://ron-swanson-quotes.herokuapp.com/v2/quotes/{getcount}'):
     requests.get(url)
     response = requests.get(url)
     data_from_json = response.json()
-    with open("Quotes.json", mode="w" ) as write_file:
+    with open("Quotes.json", mode="w") as write_file:
         json.dump(data_from_json, write_file, indent=4)
 
     return response
 
-# getcount = int(input("How many quotes do you want to se: : "))
-print(get_Ron_Swanson_quotes())
 
+print(get_Ron_Swanson_quotes())
