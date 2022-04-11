@@ -19,4 +19,4 @@ element = driver.find_elements(By.CLASS_NAME, "bg-gray")
 driver.find_element_by_xpath('//*[@id="distancefrom"]').send_keys("Riga")
 driver.find_element_by_xpath('//*[@id="distanceto"]').send_keys("Liepaja")
 driver.find_element_by_id("hae").submit()
-print(driver.find_element_by_xpath('//*[@id="totaldistancekm"]'))
+
