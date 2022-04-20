@@ -48,5 +48,6 @@ def all_dir():
         directions.append(element.text)
     return directions
 
+
 for car in all_dir():
     print("-> " + car)
