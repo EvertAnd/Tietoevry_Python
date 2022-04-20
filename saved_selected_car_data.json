@@ -1,0 +1,121 @@
+
+____________________________________________________________________________________________________
+20.4.2022, 16:16:23
+Atlasītie sludinājumi:
+[
+  "Gaz 21 3,000 € 80 tūkst. https://www.ss.com/msg/lv/transport/cars/gaz/21/bcnce.html"
+]
+____________________________________________________________________________________________________
+20.4.2022, 16:16:23
+Lētākais auto:
+[
+  [
+    {
+      "Marka": "Gaz",
+      "modelis": "21",
+      "gads": "1966",
+      "nobraukums": "80 tūkst.",
+      "tilpums": "2.5",
+      "cena": "3,000 €",
+      "sludinājums": "https://www.ss.com/msg/lv/transport/cars/gaz/21/bcnce.html"
+    }
+  ]
+]
+____________________________________________________________________________________________________
+20.4.2022, 16:16:23
+Dargākais auto:
+[
+  [
+    {
+      "Marka": "Gaz",
+      "modelis": "21",
+      "gads": "1966",
+      "nobraukums": "80 tūkst.",
+      "tilpums": "2.5",
+      "cena": "3,000 €",
+      "sludinājums": "https://www.ss.com/msg/lv/transport/cars/gaz/21/bcnce.html"
+    }
+  ]
+]
+____________________________________________________________________________________________________
+20.4.2022, 16:16:23
+Auto ar minimālo nobraukumu:
+[
+  [
+    {
+      "Marka": "Gaz",
+      "modelis": "21",
+      "gads": "1966",
+      "nobraukums": "80 tūkst. km",
+      "tilpums": "2.5",
+      "cena": "3,000 €",
+      "sludinājums": "https://www.ss.com/msg/lv/transport/cars/gaz/21/bcnce.html"
+    }
+  ]
+]
+____________________________________________________________________________________________________
+20.4.2022, 16:16:23
+Vid. cena:
+[
+  "3000.00 €"
+]
+____________________________________________________________________________________________________
+20.4.2022, 16:17:48
+Atlasītie sludinājumi:
+[
+  "Volvo S70 800 € 297 tūkst. https://www.ss.com/msg/lv/transport/cars/volvo/s70/cfkim.html"
+]
+____________________________________________________________________________________________________
+20.4.2022, 16:17:48
+Lētākais auto:
+[
+  [
+    {
+      "Marka": "Volvo",
+      "modelis": "S70",
+      "gads": "1997",
+      "nobraukums": "297 tūkst.",
+      "tilpums": "2.5D",
+      "cena": "800 €",
+      "sludinājums": "https://www.ss.com/msg/lv/transport/cars/volvo/s70/cfkim.html"
+    }
+  ]
+]
+____________________________________________________________________________________________________
+20.4.2022, 16:17:48
+Dargākais auto:
+[
+  [
+    {
+      "Marka": "Volvo",
+      "modelis": "S70",
+      "gads": "1997",
+      "nobraukums": "297 tūkst.",
+      "tilpums": "2.5D",
+      "cena": "800 €",
+      "sludinājums": "https://www.ss.com/msg/lv/transport/cars/volvo/s70/cfkim.html"
+    }
+  ]
+]
+____________________________________________________________________________________________________
+20.4.2022, 16:17:48
+Auto ar minimālo nobraukumu:
+[
+  [
+    {
+      "Marka": "Volvo",
+      "modelis": "S70",
+      "gads": "1997",
+      "nobraukums": "297 tūkst. km",
+      "tilpums": "2.5D",
+      "cena": "800 €",
+      "sludinājums": "https://www.ss.com/msg/lv/transport/cars/volvo/s70/cfkim.html"
+    }
+  ]
+]
+____________________________________________________________________________________________________
+20.4.2022, 16:17:48
+Vid. cena:
+[
+  "800.00 €"
+]

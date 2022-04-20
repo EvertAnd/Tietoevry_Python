@@ -13,7 +13,7 @@ direction_to = input("Ievadi galamērķi: ")
 s = Service("C:\Program Files\Python39\Scripts\chromedriver.exe")
 driver = webdriver.Chrome(service=s)
 
-driver.set_window_size(1024, 600)
+# driver.set_window_size(1024, 600)
 driver.maximize_window()
 url = "https://www.bing.com/maps/directions"
 driver.get(url)
@@ -35,14 +35,13 @@ time.sleep(2)
 title = driver.find_element(By.CLASS_NAME, "title")  # Atrod meklētās norādes nosaukums veidojas no "from" to "To"
 print(title.text)
 
-
 driver.get_screenshot_as_file("The_way.png")
 time.sleep(2)  # this will wait for 2 seconds
 pyautogui.press('Tab')
 pyautogui.press('Enter')
 
 def all_dir():
-    allldir = driver.find_elements(By.CLASS_NAME, "bm_dirInstructionRow")
+    allldir = driver.find_elements(By.CLASS_NAME, "multimodeInstructions")
     directions = []
     for element in allldir:
         directions.append(element.text)
