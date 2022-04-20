@@ -8,7 +8,8 @@ from selenium.webdriver.remote.webelement import WebElement
 direction_from = input("Ievadi sākuma adresi: ")
 direction_to = input("Ievadi galamērķi: ")
 
-driver = webdriver.Chrome("C:\Windows\Temp\chromedriver.exe")  # set path to chromedriver if you have no PATH
+driver = webdriver.Chrome("C:\Program Files\Python39\Scripts\chromedriver.exe")  # set path to chromedriver if you have no PATH
+# driver = webdriver.Chrome()
 driver.set_window_size(1024, 600)
 driver.maximize_window()
 url = "https://www.bing.com/maps/directions"
@@ -21,6 +22,8 @@ element = driver.find_elements(By.CLASS_NAME, "dirBtnGo commonButton")
 driver.find_element(By.XPATH, '//*[@placeholder="From"]').send_keys(direction_from)
 driver.find_element(By.XPATH, '//*[@placeholder="To"]').send_keys(direction_to)
 pyautogui.press('enter')
+time.sleep(2)
+driver.get_screenshot_as_file("The_way.png")
 time.sleep(2)  # this will wait for 2 seconds
 pyautogui.press('Tab')
 pyautogui.press('Enter')
