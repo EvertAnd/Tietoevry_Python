@@ -49,5 +49,5 @@ def all_dir():
     return directions
 
 
-for car in all_dir():
-    print("-> " + car)
+for dir in all_dir():
+    print("-> " + dir)
