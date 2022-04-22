@@ -45,9 +45,11 @@ element = driver.find_elements(By.CLASS_NAME, "dirBtnGo commonButton")
 element1 = driver.find_elements(By.CLASS_NAME, "dirModes")
 time.sleep(1)  # this will wait for 1 seconds
 
-driver.find_element(By.XPATH, '//*[@class="dirBtnDrive dirBtnNormal"]').click()
-# selected_way = driver.find_element(By.CLASS_NAME, value=selectemetod)  # Nospiež opciju braukt ar mašīnu (ok)
-# driver.find_element(by=By.CLASS_NAME, value="dirBtnDrive dirBtnNormal").click() #Nospiež opciju braukt ar mašīnu
+driver.find_element(By.XPATH, '//*[@class="dirBtnDrive dirBtnNormal"]').click()  # Nospiež opciju braukt ar mašīnu (ok)
+# selected_way = driver.find_element(By.CLASS_NAME, value=selectemetod)  # Sākuma izvēlne Auto vai ar Kājām (nok)
+# selected_way.click()  # Nospiež opciju braukt ar mašīnu   (Nok)
+
+# driver.find_element(by=By.CLASS_NAME, value="dirBtnDrive dirBtnNormal").click() # variants (nok)
 # selected_way = driver.find_element(By.CLASS_NAME, value="dirBtnDrive dirBtnNormal")
 # selected_way.click()  # Nospiež opciju braukt ar mašīnu   (Nok)
 
