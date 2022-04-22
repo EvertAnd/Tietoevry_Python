@@ -8,57 +8,54 @@ from datetime import date
 import time
 
 
+# Var  izvēlēties Auto vai ar kājām. ?? ( Jāpieestrādā, jo neiet tālāk pēc šī. )
 # def metodetogetto():
-#     metodetoget = input("Ievadiet vēlāmo pārvietošanās metodi Auto -"'A'", ar Kājām - ""K"": ")
+#     metodetoget = input("Ievadiet vēlāmo pārvietošanās metodi. Auto -"'A'", Kājām - "'K'": ")
 #     all_metods = 'dirBtnDrive dirBtnNormal', 'irBtnWalk dirBtnNormal'
 #     if metodetoget == "A":
-#         brand = "dirBtnDrive dirBtnNormal"
-#         print(brand)
-#         exit()
+#         way = "dirBtnDrive dirBtnNormal"
+#         return way
 #     if metodetoget == "K":
-#         brand = "irBtnWalk dirBtnNormal"
-#         print(brand)
-#         exit()
+#         way = "irBtnWalk dirBtnNormal"
+#         return way
 #     if metodetoget not in all_metods:
 #         print(metodetoget + " Ievadītā opcija nav pieejama")
-#         brand = metodetogetto()
-#     return brand
+#         way = metodetogetto()
+#     return way
 #
 #
 # selectemetod = metodetogetto()
-# selectemetod.click()
+# print(selectemetod)
 
 
 direction_from = input("Ievadi sākuma adresi: ")
 direction_to = input("Ievadi galamērķi: ")
 
-
-
-
 s = Service("C:\\Program Files\\Python39\\Scripts\\chromedriver.exe")
 driver = webdriver.Chrome(service=s)
-# driver.set_window_size(1024, 600)
+driver.set_window_size(1024, 600)
 driver.maximize_window()
 url = "https://www.bing.com/maps/directions"
 driver.get(url)
 
-time.sleep(1)  # this will wait for 1 seconds
-
 element = driver.find_elements(By.CLASS_NAME, "wayPointsContainer")
+# element = driver.find_element(By.XPATH, '//*[@class="wayPointsContainer"]')
 element = driver.find_elements(By.CLASS_NAME, "directionsPanelRoot")
 element = driver.find_elements(By.CLASS_NAME, "dirBtnGo commonButton")
 element1 = driver.find_elements(By.CLASS_NAME, "dirModes")
 time.sleep(1)  # this will wait for 1 seconds
 
-driver.find_element(By.XPATH, '//*[@class="dirBtnDrive dirBtnNormal"]').click()  # Nospiež opciju braukt ar mašīnu (
-
-# Var izdomāt izvēlēties Auto vai ar kājām. ??
-
+driver.find_element(By.XPATH, '//*[@class="dirBtnDrive dirBtnNormal"]').click()
+# selected_way = driver.find_element(By.CLASS_NAME, value=selectemetod)  # Nospiež opciju braukt ar mašīnu (ok)
+# driver.find_element(by=By.CLASS_NAME, value="dirBtnDrive dirBtnNormal").click() #Nospiež opciju braukt ar mašīnu
+# selected_way = driver.find_element(By.CLASS_NAME, value="dirBtnDrive dirBtnNormal")
+# selected_way.click()  # Nospiež opciju braukt ar mašīnu   (Nok)
 
 time.sleep(1)  # this will wait for 1 seconds
 driver.find_element(By.XPATH, '//*[@placeholder="From"]').send_keys(direction_from)
 driver.find_element(By.XPATH, '//*[@placeholder="To"]').send_keys(direction_to)
 # driver.find_element(By.XPATH, '//*[@placeholder="To"]').send_keys(direction_next)
+
 time.sleep(1)
 pyautogui.press('enter')
 time.sleep(2)
@@ -77,9 +74,14 @@ def all_dir():
     directions = []
     for element in dirInstruction:
         directions.append(element.text)
-    return directions
+    return str(directions)
 
+
+with open("new_dir_out.txt", mode="w", encoding="utf-8") as out:
+    out.write(all_dir())
 
 for dir in all_dir():
     print("-> " + dir)
 
+driver.close()
+driver.quit()
