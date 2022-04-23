@@ -1,4 +1,11 @@
+# Final project for Python Spring Feb Apr 2022
+#     Project authors:
+#         -> Oleksandr Sailun
+#         -> Andis Everts
+
+
 import pyautogui
+from selenium.webdriver import DesiredCapabilities
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium import webdriver
@@ -23,7 +30,7 @@ def metodetogetto():
 
 
 selectemetod = metodetogetto()
-print(selectemetod)
+print(selectemetod)  # For now I set print (to see what is choosen
 
 direction_from = input("Ievadi sākuma adresi: ")
 direction_to = input("Ievadi galamērķi: ")
@@ -35,19 +42,22 @@ driver.maximize_window()
 url = "https://www.bing.com/maps/directions"
 driver.get(url)
 
-element = driver.find_elements(By.CLASS_NAME, "wayPointsContainer")
-# element = driver.find_element(By.XPATH, '//*[@class="wayPointsContainer"]')
-element1 = driver.find_elements(By.CLASS_NAME, "directionsPanelRoot")
+capabilities = DesiredCapabilities.CHROME
+capabilities['unexpectedAlertBehaviour'] = 'ignore'
+capabilities['loggingPrefs'] = {'browser': 'ALL'}
+log_file_name = 'driver_chrome.log'
+
+# element = driver.find_elements(By.CLASS_NAME, "wayPointsContainer")
+element = driver.find_element(By.XPATH, '//*[@class="wayPointsContainer"]')
 element2 = driver.find_elements(By.CLASS_NAME, "dirBtnGo commonButton")
 element3 = driver.find_elements(By.CLASS_NAME, "dirModes")
-element4 = driver.find_elements(By.CLASS_NAME, "dirTopRow")
+# element4 = driver.find_elements(By.CLASS_AME, "dirTopRow")
 time.sleep(1)  # this will wait for 1 seconds
 
-driver.find_element(By.XPATH, '//*[@class="dirBtnWalk dirBtnNormal"]').click()  # Nospiež opciju braukt ar mašīnu (ok)
+driver.find_element(By.XPATH, '//*[@class="dirBtnDrive dirBtnNormal"]').click()  # Nospiež opciju braukt ar mašīnu (ok)
 # driver.find_element(By.CLASS_NAME, selectemetod).click()
 # selected_way = driver.find_element(by=By.XPATH, value=selectemetod)  # Sākuma izvēlne Auto vai ar Kājām (nok)
 # selected_way.click()  # Nospiež opciju braukt ar mašīnu   (Nok)
-
 # driver.find_element(by=By.CLASS_NAME, value="dirBtnDrive dirBtnNormal").click() # variants (nok)
 # driver.find_element(By.CLASS_NAME, value=selectemetod).click()
 # selected_way.click()  # Nospiež opciju braukt ar mašīnu   (Nok)
@@ -95,5 +105,13 @@ def replace_none_values(some_dict):
 intern_route = zip_longest(all_dir(), all_dist())
 final_route = replace_none_values(dict(intern_route))
 
+i = 1
 for key, value in final_route.items():
-    print(key, '-', value)
+    if value == '':
+        print(i, '.', key)
+    else:
+        print(i, '.', key, '-', value)
+    i += 1
+
+pyautogui.press('Tab')
+pyautogui.press('Enter')
